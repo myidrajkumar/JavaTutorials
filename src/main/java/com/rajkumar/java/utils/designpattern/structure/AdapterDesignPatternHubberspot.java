@@ -1,4 +1,4 @@
-package com.rajkumar.java.utils.designpattern.behaviour;
+package com.rajkumar.java.utils.designpattern.structure;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
