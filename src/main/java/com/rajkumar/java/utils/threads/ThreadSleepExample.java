@@ -15,6 +15,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class ThreadSleepExample {
 
+  private static Logger logger = LogManager.getLogger();
+  
   private ThreadSleepExample() { }
   
   /**
@@ -24,27 +26,27 @@ public class ThreadSleepExample {
    */
   public static void main(String[] args) {
     
-    Logger logger = LogManager.getLogger();
     
-    Runnable runnable = () -> {
-      
-      logger.info("Foo " + Thread.currentThread().getName());
-      
-      //Rather than using Thread.sleep(), Use the below which is more readable
-      try {
-        TimeUnit.SECONDS.sleep(1);
-      } catch (InterruptedException exception) {
-        Utils.getException(exception);
-        Thread.currentThread().interrupt();
-      }
-      
-      logger.info("Bar " + Thread.currentThread().getName());
-
-    };
+    
+    Runnable runnable = ThreadSleepExample::getSleep;
 
     Thread thread = new Thread(runnable);
     thread.start();
 
+  }
+
+  private static void getSleep() {
+    logger.info("Foo " + Thread.currentThread().getName());
+    
+    //Rather than using Thread.sleep(), Use the below which is more readable
+    try {
+      TimeUnit.SECONDS.sleep(1);
+    } catch (InterruptedException exception) {
+      Utils.getException(exception);
+      Thread.currentThread().interrupt();
+    }
+    
+    logger.info("Bar " + Thread.currentThread().getName());
   }
 
 }
