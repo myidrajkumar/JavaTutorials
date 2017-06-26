@@ -9,7 +9,7 @@ import com.rajkumar.java.utils.lib.Utils;
 /**
  * Instead of getting the negative value exception is thrown.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class SafeNumberOverflow {

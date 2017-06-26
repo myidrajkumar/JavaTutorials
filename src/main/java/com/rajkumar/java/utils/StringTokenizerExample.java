@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * Strings will be split using StringTokenizer.
  * StringTokenizer is deprecated so do not use at all.
  * 
- * @author seenappa
+ * @author Rajkumar
  *
  */
 public class StringTokenizerExample {

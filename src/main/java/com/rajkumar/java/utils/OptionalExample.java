@@ -12,7 +12,7 @@ import java.util.Optional;
 /**
  * Avoiding NullPointer Exception.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class OptionalExample {

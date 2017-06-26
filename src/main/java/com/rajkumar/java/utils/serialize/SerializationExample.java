@@ -16,7 +16,7 @@ import java.io.Serializable;
 /**
  * Serialization Example.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class SerializationExample {

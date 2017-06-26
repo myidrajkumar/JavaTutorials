@@ -16,7 +16,7 @@ import java.util.function.Function;
 /**
  * Lambda Expression Example.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class LambdaExpressionExample {

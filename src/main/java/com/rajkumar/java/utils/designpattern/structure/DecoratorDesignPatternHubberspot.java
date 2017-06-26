@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Decorator Pattern Example.
  *  
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class DecoratorDesignPatternHubberspot {

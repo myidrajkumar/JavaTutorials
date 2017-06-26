@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * How to count frequency of each character in a string in Java.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class CharacterCountingProgram {

@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Test case to validate Fibonacci series.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class FibonacciTest {

@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 /**
  * Converting duration as time unit.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class ConvertDuration2TimeUnit {

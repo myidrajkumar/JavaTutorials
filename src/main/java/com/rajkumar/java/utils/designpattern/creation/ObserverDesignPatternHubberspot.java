@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Observer Pattern Example.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class ObserverDesignPatternHubberspot {

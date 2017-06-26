@@ -19,7 +19,7 @@ import java.nio.file.Paths;
 /**
  * Downloading file from Web.
  * 
- * @author seenappa
+ * @author Rajkumar
  *
  */
 public class DownloadFileFromWebExample {

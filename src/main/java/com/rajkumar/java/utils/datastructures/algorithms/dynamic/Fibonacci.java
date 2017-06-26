@@ -8,7 +8,7 @@ package com.rajkumar.java.utils.datastructures.algorithms.dynamic;
  * 2. Memoization — Store the solution of these subproblems 
  *                  so that we do not have to solve them again </p>
  *
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class Fibonacci {

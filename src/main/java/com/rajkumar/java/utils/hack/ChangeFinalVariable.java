@@ -11,7 +11,7 @@ import java.lang.reflect.Modifier;
 /**
  * Reflection example to modify final variable.
  * 
- * @author seenappa
+ * @author Rajkumar
  *
  */
 public class ChangeFinalVariable {
