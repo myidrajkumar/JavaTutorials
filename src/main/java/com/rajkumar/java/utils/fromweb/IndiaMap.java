@@ -3,7 +3,7 @@ package com.rajkumar.java.utils.fromweb;
 /**
  * India Map will be drawn.
  * 
- * @author seenappa
+ * @author Rajkumar
  *
  */
 public class IndiaMap {

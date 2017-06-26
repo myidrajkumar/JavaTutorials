@@ -10,7 +10,7 @@ import java.util.Arrays;
 /**
  * Java program to check if two strings are Anagrams.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class AnagramProgram {

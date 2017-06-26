@@ -4,7 +4,7 @@ package com.rajkumar.java.utils.lib;
 /**
  * Constants for Project.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public enum Constants {

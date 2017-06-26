@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 /**
  * Consumer Example.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class ConsumerExample {

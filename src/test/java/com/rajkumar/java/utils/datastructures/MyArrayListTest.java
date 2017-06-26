@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Testing MyArrayList.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class MyArrayListTest {

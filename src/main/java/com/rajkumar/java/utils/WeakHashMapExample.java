@@ -10,7 +10,7 @@ import java.util.WeakHashMap;
 /**
  * WeakHashMap example to understand.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class WeakHashMapExample {

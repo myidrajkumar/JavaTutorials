@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * My Binary Tree.   As of now, Only traversal is implemented.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class BinaryTree<E> {

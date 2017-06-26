@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * To check the string is rotated or not.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class RotatedStringProgram {

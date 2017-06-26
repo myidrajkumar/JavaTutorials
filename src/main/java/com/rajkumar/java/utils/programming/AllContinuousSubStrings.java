@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Program to print all continuous sub strings.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class AllContinuousSubStrings {

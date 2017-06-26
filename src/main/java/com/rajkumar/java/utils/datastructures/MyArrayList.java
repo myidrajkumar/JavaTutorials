@@ -7,7 +7,7 @@ import java.util.Collection;
 /**
  * My Own ArrayList.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class MyArrayList<E> extends AbstractList<E> {

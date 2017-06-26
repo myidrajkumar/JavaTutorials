@@ -13,7 +13,7 @@ import java.util.ListIterator;
 /**
  * This to check java8 replaceAll API.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class AllListElementsReplacement {

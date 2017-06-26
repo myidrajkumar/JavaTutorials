@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Streams Example.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public class StreamExamplesOne {
