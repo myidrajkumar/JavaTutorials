@@ -10,14 +10,14 @@ public class ExceptionTest {
   
   @Test
   public void testMethod1() {
-    int i = 1 / 0;
-    logger.info(i);
+    int result = 1 / 0;
+    logger.info(result);
   }
 
   @Test(expected = ArithmeticException.class)
   public void testMethod2() {
-    int i = 1 / 0;
-    logger.info(i);
+    int result = 1 / 0;
+    logger.info(result);
   }
 
   @Test(expected = ArithmeticException.class)

@@ -40,7 +40,7 @@ public class MySchedluedTimerExample {
         try {
           TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException exception) {
-          Utils.getException(exception);
+          logger.error(Utils.getException(exception));
           Thread.currentThread().interrupt();
         }
         logger.info("Timer task finished at: " + new Date());
@@ -55,7 +55,7 @@ public class MySchedluedTimerExample {
     try {
       TimeUnit.MINUTES.sleep(1);
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
 

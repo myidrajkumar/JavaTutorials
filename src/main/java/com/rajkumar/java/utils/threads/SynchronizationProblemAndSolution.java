@@ -41,7 +41,7 @@ public class SynchronizationProblemAndSolution {
     try {
       executor.awaitTermination(5, TimeUnit.SECONDS);
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     
@@ -57,7 +57,7 @@ public class SynchronizationProblemAndSolution {
     try {
       executor.awaitTermination(3, TimeUnit.SECONDS);
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     logger.info("Synchronized Count = " + count);

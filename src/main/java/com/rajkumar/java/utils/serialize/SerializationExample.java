@@ -52,7 +52,7 @@ public class SerializationExample {
         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
       oos.writeObject(leo);
     } catch (IOException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
     }
 
     logger.info("Serialization done.");
@@ -64,7 +64,7 @@ public class SerializationExample {
       Lion deserializedObj = (Lion) ois.readObject();
       logger.info("DeSerialization done. Lion: " + deserializedObj.getSound());
     } catch (IOException | ClassNotFoundException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
     }
 
   }
@@ -78,7 +78,7 @@ public class SerializationExample {
         ObjectOutputStream oos = new ObjectOutputStream(fos)) {
       oos.writeObject(leo);
     } catch (IOException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
     }
 
     logger.info("Serialization done.");
@@ -90,7 +90,7 @@ public class SerializationExample {
       CustomizedLion deserializedObj = (CustomizedLion) ois.readObject();
       logger.info("DeSerialization done. CustomizedLion: " + deserializedObj.getSound());
     } catch (IOException | ClassNotFoundException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
     }
   }
 

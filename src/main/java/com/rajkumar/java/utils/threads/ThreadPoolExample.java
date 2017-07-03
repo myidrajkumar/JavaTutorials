@@ -64,7 +64,7 @@ public class ThreadPoolExample {
       try {
         TimeUnit.SECONDS.sleep(2);
       } catch (InterruptedException exception) {
-        Utils.getException(exception);
+        logger.error(Utils.getException(exception));
         Thread.currentThread().interrupt();
       }
     }
