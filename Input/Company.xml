@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompanyName>
+	<Company>
+		<Name>eBay</Name>
+		<Employee>5000</Employee>
+	</Company>
+	<Company>
+		<Name>Google</Name>
+		<Employee>6000</Employee>
+	</Company>
+	<Company>
+		<Name>Paypal</Name>
+		<Employee>7000</Employee>
+	</Company>
+	<Company>
+		<Name>Microsoft</Name>
+		<Employee>8000</Employee>
+	</Company>
+</CompanyName>

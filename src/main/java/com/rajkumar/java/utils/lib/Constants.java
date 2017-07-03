@@ -9,6 +9,7 @@ package com.rajkumar.java.utils.lib;
  */
 public enum Constants {
   OUTPUT_DIR("Output/"),
+  INPUT_DIR("Input/"),
   LINE_SEPERATOR("\n ===================================== \n");
 
   private String value;
