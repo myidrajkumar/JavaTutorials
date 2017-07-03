@@ -1,5 +1,8 @@
 package com.rajkumar.java.utils.fromweb;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.rajkumar.java.utils.lib.Utils;
 
 import javax.sound.midi.InvalidMidiDataException;
@@ -19,6 +22,8 @@ import javax.sound.midi.Track;
  */
 public class MusicExample {
 
+  private static Logger logger = LogManager.getLogger();
+  
   private MusicExample() { }
   
   /**
@@ -58,7 +63,7 @@ public class MusicExample {
       player.start();
             
     } catch (MidiUnavailableException | InvalidMidiDataException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
     }
   }
 }

@@ -26,7 +26,7 @@ public class SynchronizationExample {
     try {
       TimeUnit.SECONDS.sleep(10);
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     logger.info(Thread.currentThread().getName());
@@ -43,7 +43,7 @@ public class SynchronizationExample {
     try {
       TimeUnit.SECONDS.sleep(10);
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     logger.info(Thread.currentThread().getName());
@@ -63,7 +63,7 @@ public class SynchronizationExample {
       try {
         TimeUnit.SECONDS.sleep(10);
       } catch (InterruptedException exception) {
-        Utils.getException(exception);
+        logger.error(Utils.getException(exception));
         Thread.currentThread().interrupt();
       }
       logger.info(Thread.currentThread().getName());
@@ -99,7 +99,7 @@ public class SynchronizationExample {
       secondInstanceLock.join();
       thirdInstanceLock.join();
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     
@@ -117,7 +117,7 @@ public class SynchronizationExample {
       fourthInstanceLock.join();
       fifthInstanceLock.join();
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
     
@@ -144,7 +144,7 @@ public class SynchronizationExample {
       eighthInstanceLock.join();
       ninthInstanceLock.join();
     } catch (InterruptedException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       Thread.currentThread().interrupt();
     }
   }

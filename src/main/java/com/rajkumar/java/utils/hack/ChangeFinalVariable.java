@@ -56,7 +56,7 @@ public class ChangeFinalVariable {
     try {
       finalVariableField = finalVariableClass.getDeclaredField("FINAL_VARIABLE");
     } catch (NoSuchFieldException | SecurityException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       return;
     }
 
@@ -67,7 +67,7 @@ public class ChangeFinalVariable {
     try {
       fieldModifier = Field.class.getDeclaredField("modifiers");
     } catch (NoSuchFieldException | SecurityException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       return;
     }
     fieldModifier.setAccessible(true);
@@ -78,7 +78,7 @@ public class ChangeFinalVariable {
       fieldModifier.setAccessible(true);
       finalVariableField.set(null, 40);
     } catch (IllegalArgumentException | IllegalAccessException exception) {
-      Utils.getException(exception);
+      logger.error(Utils.getException(exception));
       return;
     }
 

@@ -74,7 +74,7 @@ public class ProducerConsumerInBlockingQueue {
           msgQueue.put(msg);
           logger.info("Produced " + msg.getMsg());
         } catch (InterruptedException exception) {
-          Utils.getException(exception);
+          logger.error(Utils.getException(exception));
           Thread.currentThread().interrupt();
         }
       }
@@ -84,7 +84,7 @@ public class ProducerConsumerInBlockingQueue {
       try {
         msgQueue.put(msg);
       } catch (InterruptedException exception) {
-        Utils.getException(exception);
+        logger.error(Utils.getException(exception));
         Thread.currentThread().interrupt();
       }
     }
@@ -111,7 +111,7 @@ public class ProducerConsumerInBlockingQueue {
         
         logger.info("Exit Messgae From Producer is '" + msg.getMsg() + "'");
       } catch (InterruptedException exception) {
-        Utils.getException(exception);
+        logger.error(Utils.getException(exception));
         Thread.currentThread().interrupt();
       }
     }
