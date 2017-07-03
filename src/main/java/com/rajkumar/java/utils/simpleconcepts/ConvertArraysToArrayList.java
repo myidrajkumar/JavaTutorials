@@ -18,13 +18,13 @@ import java.util.stream.Collectors;
  * @author Rajkumar
  *
  */
-public class ConvertArraysToArrayLisy {
+public class ConvertArraysToArrayList {
   
   private static final String LIST_STRING = "List => ";
   private static final String ARRAY_STRING = "Array => ";
   private static Logger logger = LogManager.getLogger();
   
-  private ConvertArraysToArrayLisy() {}
+  private ConvertArraysToArrayList() {}
   
   /**
    * Main Method.

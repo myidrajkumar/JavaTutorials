@@ -1,1 +1,5 @@
 *.class
+.classpath
+.project
+**/Output
+**/target
