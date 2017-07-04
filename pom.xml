@@ -11,6 +11,8 @@
 	<properties>
 		<postgresql.java.driver.version>42.0.0</postgresql.java.driver.version>
 		<mail.api.version>1.5.6</mail.api.version>
+		<org.json.version>20170516</org.json.version>
+		<apache.http.version>4.4.6</apache.http.version>
 	</properties>
 
 	<parent>
@@ -32,7 +34,19 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>${mail.api.version}</version>
 		</dependency>
+		
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${apache.http.version}</version>
+        </dependency>
+        
 	</dependencies>
 
 	<build>
