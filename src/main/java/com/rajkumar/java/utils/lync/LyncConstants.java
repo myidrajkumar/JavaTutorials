@@ -3,7 +3,7 @@ package com.rajkumar.java.utils.lync;
 /**
  * Constants.
  * 
- * @author Seenappa
+ * @author Rajkumar
  *
  */
 public interface LyncConstants {  //NOSONAR
