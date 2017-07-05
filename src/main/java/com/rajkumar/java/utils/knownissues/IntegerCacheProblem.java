@@ -25,7 +25,7 @@ public class IntegerCacheProblem {
     Integer integer1 = 3;
     Integer integer2 = 3;
     
-    if (integer1 == integer2) {
+    if (integer1 == integer2) {  //NOSONAR
       logger.info("3 == 3"); // Because less than 256 values will be cached
     } else {
       logger.info("3 != 3");
@@ -34,7 +34,7 @@ public class IntegerCacheProblem {
     Integer integer3 = 300;
     Integer integer4 = 300;
     
-    if (integer3 == integer4) {
+    if (integer3 == integer4) {  //NOSONAR
       logger.info("300 == 300");
     } else {
       logger.info("300 != 300");
