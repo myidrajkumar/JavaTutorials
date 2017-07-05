@@ -1348,7 +1348,7 @@ public class LyncChat implements TargetDomain {
     logger.info(LyncConstants.GET_RESPONSE_CODE + responseCode);
     if (responseCode == HttpsURLConnection.HTTP_OK) { // success
       File source = new File(IMG_PATH);
-      try(BufferedInputStream in = new BufferedInputStream(con.getInputStream());
+      try (BufferedInputStream in = new BufferedInputStream(con.getInputStream());
           FileOutputStream fos = new FileOutputStream(source);) {
         int current;
         while ((current = in.read()) != -1) {
@@ -1407,7 +1407,7 @@ public class LyncChat implements TargetDomain {
     logger.info(LyncConstants.GET_RESPONSE_CODE + responseCode);
     if (responseCode == HttpsURLConnection.HTTP_OK) { // success
       
-      try( BufferedInputStream in = new BufferedInputStream(con.getInputStream());
+      try ( BufferedInputStream in = new BufferedInputStream(con.getInputStream());
           FileOutputStream fos = new FileOutputStream(source);) {
         
         int current;
