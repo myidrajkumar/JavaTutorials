@@ -12,10 +12,12 @@ public class TimeOutTest {
   
   @Test(timeout = 200)
   public void testMethod() {
+    logger.error("If this method did not return within specified time, will fail.");
     boolean condition = true;
     if (condition) {
       try {
-        TimeUnit.MILLISECONDS.sleep(300);
+        //To pass the test i am mentioning lesser time period
+        TimeUnit.MILLISECONDS.sleep(180);
       } catch (InterruptedException e) {
         logger.info(e.getMessage());
       }

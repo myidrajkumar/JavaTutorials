@@ -13,6 +13,7 @@
 		<mail.api.version>1.5.6</mail.api.version>
 		<org.json.version>20170516</org.json.version>
 		<apache.http.version>4.4.6</apache.http.version>
+		<commons.codec.version>1.10</commons.codec.version>
 	</properties>
 
 	<parent>
@@ -34,28 +35,29 @@
 			<artifactId>javax.mail-api</artifactId>
 			<version>${mail.api.version}</version>
 		</dependency>
-		
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>${org.json.version}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>${apache.http.version}</version>
-        </dependency>
-        
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>${org.json.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>${apache.http.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>${commons.codec.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
-			</plugin>
-		</plugins>
+		<finalName>Java Tutorials</finalName>
 	</build>
 
 </project>
