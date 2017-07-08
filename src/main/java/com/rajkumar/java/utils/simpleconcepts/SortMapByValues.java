@@ -34,15 +34,32 @@ public class SortMapByValues {
     intMap.put(8, "Eight");
     intMap.put(6, "Six");
     
-    intMap.forEach(
-        (key, value) -> logger.info("Key = " + key + ", Value = " + value));
+    intMap.forEach(SortMapByValues::printLog);
    
     logger.info(Constants.LINE_SEPERATOR);
     
     intMap.entrySet().stream()
     .sorted(( entry1, entry2) ->  entry1.getValue().compareTo(entry2.getValue()))
-    .forEach((entry) -> logger.info("Key = " + entry.getKey() + ", Value = " + entry.getValue()));
+    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
     
+    logger.info(Constants.LINE_SEPERATOR);
+    
+    intMap.entrySet().stream()
+    .sorted(Map.Entry.comparingByValue())
+    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
+    
+    logger.info(Constants.LINE_SEPERATOR);
+    
+    intMap.entrySet().stream()
+    .sorted(Map.Entry.comparingByKey())
+    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
+    
+    
+  }
+
+  private static void printLog(Integer key, String value) {
+    
+    logger.info("Key = " + key + ", Value = " + value);
   }
   
 }
