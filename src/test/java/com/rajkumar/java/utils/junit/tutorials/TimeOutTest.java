@@ -4,6 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 
+import com.rajkumar.java.utils.lib.Utils;
+
 import java.util.concurrent.TimeUnit;
 
 public class TimeOutTest {
@@ -12,15 +14,12 @@ public class TimeOutTest {
   
   @Test(timeout = 200)
   public void testMethod() {
-    logger.error("If this method did not return within specified time, will fail.");
-    boolean condition = true;
-    if (condition) {
-      try {
-        //To pass the test i am mentioning lesser time period
-        TimeUnit.MILLISECONDS.sleep(180);
-      } catch (InterruptedException e) {
-        logger.info(e.getMessage());
-      }
+    logger.info("If this method did not return within specified time, will fail.");
+    try {
+      //To pass the test i am mentioning lesser time period
+      TimeUnit.MILLISECONDS.sleep(180);
+    } catch (InterruptedException exception) {
+      logger.error(Utils.getException(exception));
     }
   }
 }
