@@ -1,6 +1,6 @@
 *.class
 .classpath
 .project
-**/Output
 **/target
 *.settings
+Output/**
