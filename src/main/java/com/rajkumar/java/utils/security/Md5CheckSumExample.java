@@ -1,14 +1,14 @@
 package com.rajkumar.java.utils.security;
 
-import org.apache.commons.codec.digest.DigestUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * MD5 checksum example.

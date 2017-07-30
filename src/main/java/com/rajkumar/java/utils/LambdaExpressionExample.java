@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 
 import java.util.ArrayList;
@@ -12,6 +9,9 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.Function;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Lambda Expression Example.

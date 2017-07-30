@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.files;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -10,6 +7,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Scanner;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Reading and writing using scanner.
@@ -36,7 +36,7 @@ public class ReadAndWriteUsingScannerExample {
         Scanner diskScanner = new Scanner(
             new File(Constants.INPUT_DIR.value(), FILE_NAME));
         PrintStream diskWriter = new PrintStream(
-            new File(Constants.OUTPUT_DIR.value(), FILE_NAME)); ) {
+            new File(Constants.OUTPUT_DIR.value(), FILE_NAME));) {
       
       while (diskScanner.hasNextLine()) {
         diskWriter.println(diskScanner.nextLine());

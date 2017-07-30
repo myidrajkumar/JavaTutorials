@@ -20,6 +20,7 @@ public class EnumExample {
    * 
    * @param args empty arguments
    */
+  @SuppressWarnings("unlikely-arg-type")
   public static void main(String[] args) {
     
     logger.info("Ordinal " + Color.GREEN.ordinal() + " for GREEN");

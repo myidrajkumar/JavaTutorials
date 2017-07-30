@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
+import java.time.ZoneId;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assume;
 import org.junit.Test;
-
-import java.time.ZoneId;
 
 public class AssumptionTest {
 

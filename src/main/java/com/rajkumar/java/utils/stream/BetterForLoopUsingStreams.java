@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.stream;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.stream.IntStream;
 import java.util.stream.LongStream;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * for loop using streams.

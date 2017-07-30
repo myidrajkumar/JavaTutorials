@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.fromweb;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import javax.sound.midi.InvalidMidiDataException;
@@ -13,6 +10,9 @@ import javax.sound.midi.Sequence;
 import javax.sound.midi.Sequencer;
 import javax.sound.midi.ShortMessage;
 import javax.sound.midi.Track;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Music tone example.

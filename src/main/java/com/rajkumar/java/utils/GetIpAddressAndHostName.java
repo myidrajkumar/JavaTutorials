@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Getting Local host name.

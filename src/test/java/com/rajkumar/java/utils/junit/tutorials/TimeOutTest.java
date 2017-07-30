@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.junit.Test;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.junit.Test;
 
 public class TimeOutTest {
 

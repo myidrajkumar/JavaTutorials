@@ -1,9 +1,9 @@
 package com.rajkumar.java.utils;
 
+import com.rajkumar.java.utils.lib.Constants;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.rajkumar.java.utils.lib.Constants;
 
 /**
  * References example.

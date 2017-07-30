@@ -1,9 +1,9 @@
 package com.rajkumar.java.utils.threads;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * To generate random number always use this.

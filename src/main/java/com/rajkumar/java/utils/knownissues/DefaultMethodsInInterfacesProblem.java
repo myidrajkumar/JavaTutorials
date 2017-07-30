@@ -52,8 +52,8 @@ public class DefaultMethodsInInterfacesProblem {
   private interface ExtenedInterface extends FirstInterface, SecondInterface {
     
     @Override
-    public void log(String message); // If extended interfaces contains same
-                                     // methods, then those have to be declared
+    public void log(String message); 
+    // If extended interfaces contains same methods, those have to be declared
   }
   
   private static class MultiInterfaceImplementer

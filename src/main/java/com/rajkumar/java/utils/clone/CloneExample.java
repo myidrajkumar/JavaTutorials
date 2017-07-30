@@ -1,9 +1,9 @@
 package com.rajkumar.java.utils.clone;
 
+import com.rajkumar.java.utils.lib.Utils;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.rajkumar.java.utils.lib.Utils;
 
 /**
  * Clone Example.

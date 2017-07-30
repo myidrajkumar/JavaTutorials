@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.generics;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Specifying Upper / Lower bounds in generics.

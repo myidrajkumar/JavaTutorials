@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.time.Instant;
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Objects static methods example.
@@ -33,7 +33,7 @@ public class ObjectsUtilityExample {
     logger.info("Hash Code is " + hash);
     
     // Test for equality
-    boolean isEqual = Objects.equals(null, null);
+    boolean isEqual = Objects.equals(null, null); //NOSONAR
     logger.info("null is equal to null: " + isEqual);
     
     isEqual = Objects.equals(null, "XYZ");

@@ -1,15 +1,15 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
+import com.rajkumar.java.utils.lib.Utils;
+
+import java.util.concurrent.TimeUnit;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
-
-import com.rajkumar.java.utils.lib.Utils;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Rules example.

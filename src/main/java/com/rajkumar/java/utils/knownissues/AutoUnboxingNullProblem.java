@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.knownissues;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Auto unboxing is dangerous; There will be chances of NullPointerException.

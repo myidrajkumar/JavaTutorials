@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils.threads;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Thread Pool Example.
@@ -37,7 +37,7 @@ public class ThreadPoolExample {
     }
     
     executor.shutdown();
-    while (!executor.isTerminated()) {}
+    while (!executor.isTerminated()) {} //NOSONAR - What is the other approach
     
     logger.info("Finished all threads");
   }

@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
+import com.rajkumar.java.utils.lib.Utils;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
-
-import com.rajkumar.java.utils.lib.Utils;
 
 public class ExceptionTest {
   
@@ -15,7 +15,7 @@ public class ExceptionTest {
     try {
       int result = 1 / 0;
       logger.info(result);
-    } catch ( ArithmeticException exception) {
+    } catch (ArithmeticException exception) {
       logger.error(Utils.getException(exception));
     }
   }

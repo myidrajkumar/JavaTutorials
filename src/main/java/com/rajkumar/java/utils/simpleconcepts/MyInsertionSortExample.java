@@ -1,9 +1,9 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
+import java.util.Arrays;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import java.util.Arrays;
 
 /**
  * Insertion Sort example.
@@ -50,10 +50,10 @@ public class MyInsertionSortExample {
         continue;
       }
       
-      for ( int j = i; j < values.length; j++) {
+      for (int j = i; j < values.length; j++) {
         T checkingElement = values[j];
         
-        if ( checkingElement != null 
+        if (checkingElement != null 
             && checkingElement.compareTo(values[lowestElementIndex]) < 0) {
           lowestElementIndex = j;
         }

@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Instead of getting the negative value exception is thrown.

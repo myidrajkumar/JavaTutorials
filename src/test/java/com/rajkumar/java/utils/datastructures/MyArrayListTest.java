@@ -5,10 +5,10 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.Test;
 
 /**
  * Testing MyArrayList.
@@ -71,7 +71,7 @@ public class MyArrayListTest {
     //Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
-    assertThat("Value is not retrieved", myArrayListInteger.get(0), is(2) );
+    assertThat("Value is not retrieved", myArrayListInteger.get(0), is(2));
     
     assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.get(-1));
   }
@@ -85,8 +85,8 @@ public class MyArrayListTest {
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     
-    assertThat("Old value is not retrieved", myArrayListInteger.set(1, 6), is(4) );
-    assertThat("Setted value is not retrieved", myArrayListInteger.get(1), is(6) );
+    assertThat("Old value is not retrieved", myArrayListInteger.set(1, 6), is(4));
+    assertThat("Setted value is not retrieved", myArrayListInteger.get(1), is(6));
     
     assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.set(-1, 4));
  
@@ -100,8 +100,8 @@ public class MyArrayListTest {
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     
-    assertThat("Old value is not retrieved", myArrayListInteger.remove(1), is(4) );
-    assertThat("Size is not set when removed", myArrayListInteger.size(), is(1) );
+    assertThat("Old value is not retrieved", myArrayListInteger.remove(1), is(4));
+    assertThat("Size is not set when removed", myArrayListInteger.size(), is(1));
     
     assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.remove(2));
  

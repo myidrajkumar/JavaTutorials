@@ -1,12 +1,11 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Concurrent Modification Exception.
@@ -25,7 +24,7 @@ public class ConcurrentModificationExceptionExample {
    * 
    * @param args empty arguments
    */
-  public static void main(String[] args) throws FileNotFoundException {
+  public static void main(String[] args) {
     
     ArrayList<Integer> intList = new ArrayList<>(
         Arrays.asList(10, 1, 2, 3, 4, 5, 6));
@@ -37,7 +36,7 @@ public class ConcurrentModificationExceptionExample {
         intList.remove(4);
         /*
          * ConcurrentModificationException will be thrown
-         * So use the operation ==> ite.remove();
+         * So use the operation ==> ite.remove();  //NOSONAR
          */
       }
     }

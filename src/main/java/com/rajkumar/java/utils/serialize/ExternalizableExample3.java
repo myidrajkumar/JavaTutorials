@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.serialize;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -14,6 +11,9 @@ import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Externalize example. Here super class is externalised.
@@ -42,7 +42,7 @@ public class ExternalizableExample3 {
     try (
         FileOutputStream fo = new FileOutputStream(
             Constants.OUTPUT_DIR + "output.ser");
-        ObjectOutputStream so = new ObjectOutputStream(fo) ) {
+        ObjectOutputStream so = new ObjectOutputStream(fo)) {
       
       so.writeObject(car);
       so.flush();
@@ -56,7 +56,7 @@ public class ExternalizableExample3 {
     try (
         FileInputStream fi = new FileInputStream(
             Constants.OUTPUT_DIR + "output.ser");
-        ObjectInputStream si = new ObjectInputStream(fi) ) {
+        ObjectInputStream si = new ObjectInputStream(fi)) {
       
       newCar = (Car) si.readObject();
     } catch (IOException | ClassNotFoundException exception) {

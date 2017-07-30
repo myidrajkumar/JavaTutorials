@@ -3,15 +3,14 @@ package com.rajkumar.java.utils.datastructures;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
 import com.rajkumar.java.utils.datastructures.BinaryTree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hamcrest.CoreMatchers;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class BinaryTreeTest {
 

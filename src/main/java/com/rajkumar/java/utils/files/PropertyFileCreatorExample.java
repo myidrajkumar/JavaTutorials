@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.files;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -12,6 +9,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Creating / Reading properties file.
@@ -43,7 +43,7 @@ public class PropertyFileCreatorExample {
     File propFile1 = new File(Constants.OUTPUT_DIR.value(), XML_FILE);
     File propFile2 = new File(Constants.OUTPUT_DIR.value(), TXT_FILE);
     try (FileOutputStream propStream1 = new FileOutputStream(propFile1);
-        FileOutputStream propStream2 = new FileOutputStream(propFile2) ) {
+        FileOutputStream propStream2 = new FileOutputStream(propFile2)) {
       
       Date now = new Date();
       prop.storeToXML(propStream1, "Created on " + now);
@@ -54,7 +54,7 @@ public class PropertyFileCreatorExample {
     
     Properties readProperties = new Properties();
     
-    try (FileInputStream fis = new FileInputStream(TXT_FILE) ) {
+    try (FileInputStream fis = new FileInputStream(TXT_FILE)) {
       readProperties.load(fis);
     } catch (IOException exception) {
       logger.error(Utils.getException(exception));

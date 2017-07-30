@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.programming;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * How to count frequency of each character in a string in Java.

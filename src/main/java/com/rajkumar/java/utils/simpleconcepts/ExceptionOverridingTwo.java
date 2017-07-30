@@ -1,11 +1,11 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.io.IOException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Overriding exceptions.
@@ -38,7 +38,7 @@ public class ExceptionOverridingTwo {
       logger.error(Utils.getException(exception));
     }
     
-    // try {
+    // try {   //NOSONAR
     // foo();
     // } catch (FileNotFoundException e) { Subclass cannot be specified
     // }

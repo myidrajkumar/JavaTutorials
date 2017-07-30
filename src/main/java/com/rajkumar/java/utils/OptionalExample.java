@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Avoiding NullPointer Exception.
@@ -31,7 +31,7 @@ public class OptionalExample {
   public static void main(String[] args) {
     
     Optional<String> emptyOptional = Optional.empty();
-    if (emptyOptional.isPresent()) {
+    if (emptyOptional.isPresent()) {  //NOSONAR
       logger.info("Empty Optional is non empty and the value is " + emptyOptional.get());
     } else {
       logger.info("Initially, Empty Optional is empty.");

@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.serialize;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -16,6 +13,9 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Serialized objects consumes space.
@@ -51,7 +51,7 @@ public class VeryLargeObjectSerializationExample {
     final String serialFileName = Constants.OUTPUT_DIR + "serial.out";
     final File serializedFile = new File(serialFileName);
     try (FileOutputStream fos = new FileOutputStream(serializedFile);
-        ObjectOutputStream oos = new ObjectOutputStream(fos) ) {
+        ObjectOutputStream oos = new ObjectOutputStream(fos)) {
       
       oos.writeObject(largeObject);
       oos.flush();
@@ -63,7 +63,7 @@ public class VeryLargeObjectSerializationExample {
         + serializedFile.length() / (1024 * 1024) + " MB.");
     logger.info("Deserialization will happen now");
     try (FileInputStream fis = new FileInputStream(serializedFile);
-        ObjectInputStream ois = new ObjectInputStream(fis) ) {
+        ObjectInputStream ois = new ObjectInputStream(fis)) {
       
       VeryLargeObject object = (VeryLargeObject) ois.readObject();
       logger.info("Name = " + object.name);
@@ -81,7 +81,7 @@ public class VeryLargeObjectSerializationExample {
     final File serializedFile = new File(serialFileName);
     try (FileOutputStream fos = new FileOutputStream(serializedFile);
         GZIPOutputStream gos = new GZIPOutputStream(fos);
-        ObjectOutputStream oos = new ObjectOutputStream(gos) ) {
+        ObjectOutputStream oos = new ObjectOutputStream(gos)) {
       
       oos.writeObject(largeObject);
       oos.flush();
@@ -97,7 +97,7 @@ public class VeryLargeObjectSerializationExample {
     
     try (FileInputStream fis = new FileInputStream(serializedFile);
         GZIPInputStream gis = new GZIPInputStream(fis);
-        ObjectInputStream ois = new ObjectInputStream(gis) ) {
+        ObjectInputStream ois = new ObjectInputStream(gis)) {
       
       VeryLargeObject object = (VeryLargeObject) ois.readObject();
       logger.info("Name = " + object.name);
@@ -114,7 +114,7 @@ public class VeryLargeObjectSerializationExample {
     private int[][] bigOne = new int[SIZE][SIZE];
     private String name = "Serial";
     
-    public VeryLargeObject( String name) {
+    public VeryLargeObject(String name) {
       this.name = name;
       for (int i = 0; i < SIZE; i++) {
         Arrays.fill(bigOne[i], 100);

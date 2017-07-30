@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Consumer Example.
@@ -52,8 +52,8 @@ public class ConsumerExample {
 
   private static class Student {
 
-    public String name;
-    public int age;
+    private String name;
+    private int age;
 
     public Student(String name, int age) {
       this.name = name;

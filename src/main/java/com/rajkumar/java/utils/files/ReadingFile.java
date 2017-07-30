@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.files;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -11,6 +8,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Reading entire file using streams example.
@@ -34,7 +34,7 @@ public class ReadingFile {
     String fileName = Constants.INPUT_DIR + "Company.xml";
     
     // read file into stream, try-with-resources
-    try (Stream<String> linesStream = Files.lines(Paths.get(fileName)) ) {
+    try (Stream<String> linesStream = Files.lines(Paths.get(fileName))) {
       linesStream.forEach(logger::info);
     } catch (IOException exception) {
       logger.error(Utils.getException(exception));
@@ -43,7 +43,7 @@ public class ReadingFile {
     logger.info(Constants.LINE_SEPERATOR);
     
     // Another
-    try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName)) ) {
+    try (BufferedReader br = Files.newBufferedReader(Paths.get(fileName))) {
       br.lines().forEach(logger::info);
     } catch (IOException exception) {
       logger.error(Utils.getException(exception));

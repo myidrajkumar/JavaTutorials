@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Sort HashMap by values.
@@ -39,20 +39,20 @@ public class SortMapByValues {
     logger.info(Constants.LINE_SEPERATOR);
     
     intMap.entrySet().stream()
-    .sorted(( entry1, entry2) ->  entry1.getValue().compareTo(entry2.getValue()))
-    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
+    .sorted((entry1, entry2) ->  entry1.getValue().compareTo(entry2.getValue()))
+    .forEach(entry -> printLog(entry.getKey(), entry.getValue()));
     
     logger.info(Constants.LINE_SEPERATOR);
     
     intMap.entrySet().stream()
     .sorted(Map.Entry.comparingByValue())
-    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
+    .forEach(entry -> printLog(entry.getKey(), entry.getValue()));
     
     logger.info(Constants.LINE_SEPERATOR);
     
     intMap.entrySet().stream()
     .sorted(Map.Entry.comparingByKey())
-    .forEach((entry) -> printLog(entry.getKey(), entry.getValue()));
+    .forEach(entry -> printLog(entry.getKey(), entry.getValue()));
     
     
   }

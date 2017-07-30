@@ -1,9 +1,9 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
+import com.rajkumar.java.utils.lib.Constants;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.rajkumar.java.utils.lib.Constants;
 
 /**
  * Just listing out environment variables.

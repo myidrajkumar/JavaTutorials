@@ -1,8 +1,5 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -18,6 +15,9 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Searching files within JAR file.
@@ -90,7 +90,7 @@ public class SearchFilesInJarExample {
   private static void getList(File file, List<Content> classList,
       List<Content> methodList, List<Content> attributeList) {
     
-    try (JarFile jarFile = new JarFile(file) ) {
+    try (JarFile jarFile = new JarFile(file)) {
       Enumeration<JarEntry> jarEntries = jarFile.entries();
       
       while (jarEntries.hasMoreElements()) {

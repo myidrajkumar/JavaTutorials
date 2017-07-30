@@ -1,10 +1,10 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Overriding exceptions.
@@ -20,7 +20,7 @@ public class ExceptionOverridingOne {
   
   static class ParentExceptionClass {
     
-    protected void test() throws IOException {
+    protected void test() throws IOException {  //NOSONAR
       
       logger.info("Will be overridden");
     }
@@ -30,7 +30,7 @@ public class ExceptionOverridingOne {
     // @Override
     // protected void test() throws Exception { Parent cannot be specified
     //
-    // }
+    // }  //NOSONAR
     
     @Override
     protected void test() throws FileNotFoundException { 
@@ -41,7 +41,7 @@ public class ExceptionOverridingOne {
     // @Override
     // protected void test() { //Exception can be ignored
     //
-    // }
+    // } //NOSONAR
     
   }
   

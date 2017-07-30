@@ -26,13 +26,13 @@ public class StringChallenge {
     String s2 = "hel" + "lo";  //This addition refers from string pool
     String s3 = " mum";
     
-    if ( s1 == s2) {  //NOSONAR
+    if (s1 == s2) {  //NOSONAR
       logger.info("1 and 2 are same");
     } else {
       logger.info("1 and 2 are different");
     }
     
-    if ( s1 + s3 == "hello mum") {  //NOSONAR
+    if (s1 + s3 == "hello mum") {  //NOSONAR
       logger.info("both are same");
     } else {
       logger.info("both are different");

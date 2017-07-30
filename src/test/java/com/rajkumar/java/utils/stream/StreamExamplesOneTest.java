@@ -2,14 +2,14 @@ package com.rajkumar.java.utils.stream;
 
 import static org.junit.Assert.assertThat;
 
-import org.hamcrest.CoreMatchers;
-import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
 import java.util.function.Predicate;
+
+import org.hamcrest.CoreMatchers;
+import org.junit.Test;
 
 
 public class StreamExamplesOneTest {
@@ -128,7 +128,7 @@ public class StreamExamplesOneTest {
        
       public int salary;
       
-      public Employee(int sal ) {
+      public Employee(int sal) {
         this.salary = sal;
       }
       
@@ -160,7 +160,7 @@ public class StreamExamplesOneTest {
        
       public int salary;
       
-      public Employee(int sal ) {
+      public Employee(int sal) {
         this.salary = sal;
       }
       

@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils.hack;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.rajkumar.java.utils.lib.Utils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Reflection example to modify final variable.

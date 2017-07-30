@@ -1,11 +1,11 @@
 
 package com.rajkumar.java.utils.knownissues;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Since set contain short values, ints will not be removed.
@@ -22,6 +22,7 @@ public class ShortExample {
    * 
    * @param args empty arguments
    */
+  @SuppressWarnings("unlikely-arg-type")
   public static void main(String[] args) {
 
     Logger logger = LogManager.getLogger();

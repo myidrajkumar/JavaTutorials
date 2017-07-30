@@ -1,12 +1,5 @@
 package com.rajkumar.java.utils.lync;
 
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import com.rajkumar.java.utils.lib.Constants;
 import com.rajkumar.java.utils.lib.Utils;
 
@@ -30,6 +23,13 @@ import java.util.Map;
 import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class LyncChat implements TargetDomain {
   
@@ -147,16 +147,16 @@ public class LyncChat implements TargetDomain {
     getMyPresenceStatus();
     
     // Setting my presence information
-    // setMyPresenceStatus();
+    // setMyPresenceStatus(); //NOSONAR
     
     // Resetting my presence information is possible but currently i do not
     // know how to do and i am not interested
     
     // Getting my note
-    // getMyNote();
+    // getMyNote(); //NOSONAR
     
     // Setting my note
-    // setMyNote();
+    // setMyNote(); //NOSONAR
     
     // Resetting my note is possible but currently i do not know how to do
     // and i am not interested
@@ -165,7 +165,7 @@ public class LyncChat implements TargetDomain {
     retrieveMyPhoto();
     
     // Get and Save Other Contact photos
-    // getOtherContactsPhotos();
+    // getOtherContactsPhotos(); //NOSONAR
     
   }
   
@@ -1407,7 +1407,7 @@ public class LyncChat implements TargetDomain {
     logger.info(LyncConstants.GET_RESPONSE_CODE + responseCode);
     if (responseCode == HttpsURLConnection.HTTP_OK) { // success
       
-      try ( BufferedInputStream in = new BufferedInputStream(con.getInputStream());
+      try (BufferedInputStream in = new BufferedInputStream(con.getInputStream());
           FileOutputStream fos = new FileOutputStream(source);) {
         
         int current;
