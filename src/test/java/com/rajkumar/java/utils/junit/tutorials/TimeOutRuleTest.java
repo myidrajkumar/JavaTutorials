@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.ClassRule;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
@@ -30,6 +31,7 @@ public class TimeOutRuleTest {
   public static Timeout myClassTimeOut = new Timeout(2000, TimeUnit.MILLISECONDS);
   
   @Test
+  @Ignore
   public void testMethod() {
     try {
       TimeUnit.MILLISECONDS.sleep(1800);

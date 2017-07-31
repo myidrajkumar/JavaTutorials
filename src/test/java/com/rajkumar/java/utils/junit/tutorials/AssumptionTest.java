@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hamcrest.CoreMatchers;
 import org.junit.Assume;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AssumptionTest {
@@ -13,6 +14,7 @@ public class AssumptionTest {
   private static Logger logger = LogManager.getLogger();
   
   @Test
+  @Ignore
   public void testMethod1() {
     Assume.assumeTrue("applicable time zone assumption",
         ZoneId.systemDefault().getId().equals("America/New_York"));
@@ -27,6 +29,7 @@ public class AssumptionTest {
   }
 
   @Test
+  @Ignore
   public void testMethod3() {
     try {
       int result = 1 / 0;
@@ -47,6 +50,7 @@ public class AssumptionTest {
   }
 
   @Test
+  @Ignore
   public void testMethod5() {
     int num = 1;
     Assume.assumeThat("x being 10 assumption", num, CoreMatchers.is(10));
@@ -59,10 +63,12 @@ public class AssumptionTest {
   }
 
   @Test
+  @Ignore
   public void testMethod7() {
     String value1 = "s value";
     String value2 = null;
-    Assume.assumeNotNull(value1, value2);
+    
+    Assume.assumeNotNull(value1, value2); 
   }
 
   @Test

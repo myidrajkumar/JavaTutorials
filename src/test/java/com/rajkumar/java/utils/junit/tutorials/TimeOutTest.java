@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TimeOutTest {
@@ -13,6 +14,7 @@ public class TimeOutTest {
   private static Logger logger = LogManager.getLogger();
   
   @Test(timeout = 200)
+  @Ignore
   public void testMethod() {
     logger.info("If this method did not return within specified time, will fail.");
     try {
