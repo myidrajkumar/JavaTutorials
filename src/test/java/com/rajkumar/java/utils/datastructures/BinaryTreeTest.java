@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hamcrest.CoreMatchers;
-import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 public class BinaryTreeTest {
 
@@ -19,7 +19,7 @@ public class BinaryTreeTest {
   /**
    * Initialize the binary tree.
    */
-  @BeforeClass
+  @BeforeAll
   public static void initializeBinaryTree() {
     
     tree = new BinaryTree<>();

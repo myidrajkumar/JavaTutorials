@@ -11,7 +11,6 @@ import java.util.function.Predicate;
 import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
-
 public class StreamExamplesOneTest {
 
   @Test
