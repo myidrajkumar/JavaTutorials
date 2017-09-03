@@ -1,11 +1,11 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import com.rajkumar.java.utils.lib.Utils;
-
 import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.rajkumar.java.utils.lib.Utils;
 
 /**
  * Overriding exceptions.
@@ -30,7 +30,7 @@ public class ExceptionOverridingTwo {
       foo();
     } catch (IOException | NullPointerException exception) {
       logger.error(Utils.getException(exception));
-    } 
+    }
     
     try {
       foo();
@@ -38,14 +38,19 @@ public class ExceptionOverridingTwo {
       logger.error(Utils.getException(exception));
     }
     
-    // try {   //NOSONAR
+    // try { //NOSONAR
     // foo();
     // } catch (FileNotFoundException e) { Subclass cannot be specified
     // }
   }
   
+  /**
+   * Just Dummy Method.
+   * 
+   * @throws IOException eception
+   */
   public static void foo() throws IOException {
-    //Just example
+    // Just example
   }
   
 }

@@ -9,15 +9,24 @@ import org.apache.logging.log4j.Logger;
  * @author Rajkumar
  *
  */
-public interface StaticInterfaceExample {  //NOSONAR
+public interface StaticInterfaceExample { // NOSONAR
   
+  /**
+   * Just logger
+   */
   public static Logger logger = LogManager.getLogger();
   
+  /**
+   * Just test method to test static.
+   */
   public static void testStaticMethod() {
     
     logger.info("Static Test");
   }
   
+  /**
+   * Just test method to test default.
+   */
   public default void testDefaultMethod() {
     
     logger.info("Default Test");

@@ -13,20 +13,53 @@ import java.util.stream.Collectors;
  */
 public class StreamExamplesOne {
   
-  private StreamExamplesOne() { }
-
-  public static <T> boolean isMatchAll(List<T> inputList, Predicate<T> predicate) {
-    //Returns true only if all elements are matched.
+  private StreamExamplesOne() {}
+  
+  /**
+   * Will return true if all input items are matched with our predicate.
+   * 
+   * @param <T> type
+   * @param inputList input list
+   * @param predicate test to match
+   * 
+   * @return boolean status
+   */
+  public static <T> boolean isMatchAll(List<T> inputList,
+      Predicate<T> predicate) {
+    
+    // Returns true only if all elements are matched.
     return inputList.stream().allMatch(predicate);
   }
   
-  public static <T> boolean isMatchAny(List<T> inputList, Predicate<T> predicate) {
-    //Returns true only if any element is matched.
+  /**
+   * Will return true if any input item is matched with our predicate.
+   * 
+   * @param <T> type
+   * @param inputList input list
+   * @param predicate test to match
+   * 
+   * @return boolean status
+   */
+  public static <T> boolean isMatchAny(List<T> inputList,
+      Predicate<T> predicate) {
+    
+    // Returns true only if any element is matched.
     return inputList.stream().anyMatch(predicate);
   }
   
-  public static <T> boolean isMatchNone(List<T> inputList, Predicate<T> predicate) {
-    //Returns true only if no element is matched.
+  /**
+   * Will return true only if no input item is matched with our predicate.
+   * 
+   * @param <T> type
+   * @param inputList input list
+   * @param predicate test to match
+   * 
+   * @return boolean status
+   */
+  public static <T> boolean isMatchNone(List<T> inputList,
+      Predicate<T> predicate) {
+    
+    // Returns true only if no element is matched.
     return inputList.stream().noneMatch(predicate);
   }
   
@@ -38,19 +71,21 @@ public class StreamExamplesOne {
    */
   public static int getSum(List<Integer> inputList) {
     
-    //Returns addition of list elements.
+    // Returns addition of list elements.
     return inputList.stream().collect(Collectors.summingInt(i -> i));
   }
   
   /**
    * Smallest entry in the input list will be returned.
    * 
+   * @param <T> type
+   * 
    * @param inputList List of entries
    * @return smallest item in the input
    */
   public static <T extends Comparable<T>> T getSmallestItem(List<T> inputList) {
     
-    //Reduce the input list.
+    // Reduce the input list.
     Optional<T> smallestOptionalCountry = inputList.stream()
         .reduce((item1, item2) -> item1.compareTo(item2) <= 0 ? item1 : item2);
     return smallestOptionalCountry.orElse(null);

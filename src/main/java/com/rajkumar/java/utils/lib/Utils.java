@@ -11,8 +11,8 @@ import java.io.StringWriter;
  *
  */
 public class Utils {
-
-  private Utils() { }
+  
+  private Utils() {}
   
   /**
    * Exception will be returned as String.
@@ -21,13 +21,22 @@ public class Utils {
    * @return converted Exception
    */
   public static String getException(Exception exception) {
+    
     StringWriter writer = new StringWriter();
     exception.printStackTrace(new PrintWriter(writer));
     return (writer.toString() + "\n" + exception);
   }
   
-  
+  /**
+   * Getting class information.
+   * 
+   * @param <T> Class type
+   * @param type Input class
+   * 
+   * @return Class type
+   */
   public static <T> Class<?> getClass(T type) {
+    
     Class<?> enclosingClass = type.getClass().getEnclosingClass();
     return enclosingClass == null ? type.getClass() : enclosingClass;
   }

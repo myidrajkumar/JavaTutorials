@@ -13,13 +13,27 @@ public class NullReferrenceExample {
   
   private static Logger logger = LogManager.getLogger();
   
-  private NullReferrenceExample() { }
+  private NullReferrenceExample() {}
   
+  /**
+   * Just returning some string.
+   * 
+   * @param strValue input argument
+   * 
+   * @return input argument with appended characters
+   */
   public String getMe(String strValue) {
     
     return strValue + " String";
   }
   
+  /**
+   * Just returning some string.
+   * 
+   * @param objValue input argument
+   * 
+   * @return input argument with appended characters
+   */
   public String getMe(Object objValue) {
     
     return objValue.toString() + " Object";
@@ -33,7 +47,7 @@ public class NullReferrenceExample {
   public static void main(String[] args) {
     
     NullReferrenceExample nullRef = new NullReferrenceExample();
-    logger.info(nullRef.getMe(null)); 
+    logger.info(nullRef.getMe(null));
     // The most specific type will be called,
   }
   

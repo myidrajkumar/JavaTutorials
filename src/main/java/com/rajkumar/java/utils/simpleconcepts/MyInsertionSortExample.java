@@ -27,6 +27,11 @@ public class MyInsertionSortExample {
     doInsertionSort(values);
     
     logger.info(Arrays.toString(values));
+    
+    Integer[] values1 = null;
+    doInsertionSort(values1);
+    
+    logger.info(Arrays.toString(values1));
      
   }
 
@@ -34,7 +39,7 @@ public class MyInsertionSortExample {
   private static <T extends Comparable<T>> T[] doInsertionSort(T[] values) {
     
     if (values == null) {
-      return (T[]) new Object[0];
+      return (T[]) new Comparable[0];
     }
     
     for (int i = 1; i < values.length; i++) {

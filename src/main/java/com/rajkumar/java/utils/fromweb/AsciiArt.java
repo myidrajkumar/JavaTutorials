@@ -29,6 +29,7 @@ public class AsciiArt {
    * Main Method.
    * 
    * @param args empty arguments
+   * @throws IOException excpetion
    */
   public static void main(String[] args) throws IOException {
     

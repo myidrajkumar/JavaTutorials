@@ -17,22 +17,34 @@ import org.junit.Test;
  *
  */
 public class MyArrayListTest {
-
-
+  
+  /**
+   * Test when no elements present.
+   */
   @Test
   public void testMyArrayList_WhenNoArgConstructor_InitialStage() {
+    
     List<Integer> myArrayListInteger = new MyArrayList<>();
     
-    assertEquals("Initial size is not maintained", 0, myArrayListInteger.size());
+    assertEquals("Initial size is not maintained", 0,
+        myArrayListInteger.size());
   }
   
+  /**
+   * Test by giving initial size.
+   */
   @Test
   public void testMyArrayList_WhenSizeArgConstructor_InitialStage() {
+    
     List<Integer> myArrayListInteger = new MyArrayList<>(5);
     
-    assertEquals("Initial size is not maintained", 0, myArrayListInteger.size());
+    assertEquals("Initial size is not maintained", 0,
+        myArrayListInteger.size());
   }
   
+  /**
+   * Test by adding some elements.
+   */
   @Test
   public void testMyArrayList_WhenCollectionArgConstructor_InitialStage() {
     
@@ -42,69 +54,94 @@ public class MyArrayListTest {
     
     List<Integer> myArrayListInteger = new MyArrayList<>(myCollection);
     
-    assertEquals("Initial size is not maintained", 2, myArrayListInteger.size());
+    assertEquals("Initial size is not maintained", 2,
+        myArrayListInteger.size());
   }
-
+  
+  /**
+   * Test added elements.
+   */
   @Test
   public void testAdd() {
     
     List<Integer> myArrayListInteger = new MyArrayList<>(2);
-    assertEquals("Initial size is not maintained", 0, myArrayListInteger.size());
+    assertEquals("Initial size is not maintained", 0,
+        myArrayListInteger.size());
     
-    //Adding elements sequentially
+    // Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     assertEquals("size is not maintained", 2, myArrayListInteger.size());
     
-    //With the above, list becomes full. If i try to add now, it should not throw exception
+    // With the above, list becomes full. If i try to add now, it should not
+    // throw exception
     myArrayListInteger.add(2, 6);
     assertEquals("size is not maintained", 3, myArrayListInteger.size());
     
-    assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.add(5, 8));
+    assertThrows(IndexOutOfBoundsException.class,
+        () -> myArrayListInteger.add(5, 8));
     
   }
   
+  /**
+   * Test retrieving elements.
+   */
   @Test
   public void testGet() {
+    
     List<Integer> myArrayListInteger = new MyArrayList<>(2);
     
-    //Adding elements sequentially
+    // Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     assertThat("Value is not retrieved", myArrayListInteger.get(0), is(2));
     
-    assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.get(-1));
+    assertThrows(IndexOutOfBoundsException.class,
+        () -> myArrayListInteger.get(-1));
   }
   
-  
+  /**
+   * Test setting up elements.
+   */
   @Test
   public void testSetIntE() {
+    
     List<Integer> myArrayListInteger = new MyArrayList<>(2);
     
-    //Adding elements sequentially
+    // Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     
-    assertThat("Old value is not retrieved", myArrayListInteger.set(1, 6), is(4));
-    assertThat("Setted value is not retrieved", myArrayListInteger.get(1), is(6));
+    assertThat("Old value is not retrieved", myArrayListInteger.set(1, 6),
+        is(4));
+    assertThat("Setted value is not retrieved", myArrayListInteger.get(1),
+        is(6));
     
-    assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.set(-1, 4));
- 
+    assertThrows(IndexOutOfBoundsException.class,
+        () -> myArrayListInteger.set(-1, 4));
+    
   }
-
+  
+  /**
+   * Test removing elements.
+   */
   @Test
   public void testRemoveInt() {
+    
     List<Integer> myArrayListInteger = new MyArrayList<>(2);
     
-    //Adding elements sequentially
+    // Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
     
-    assertThat("Old value is not retrieved", myArrayListInteger.remove(1), is(4));
-    assertThat("Size is not set when removed", myArrayListInteger.size(), is(1));
+    assertThat("Old value is not retrieved", myArrayListInteger.remove(1),
+        is(4));
+    assertThat("Size is not set when removed", myArrayListInteger.size(),
+        is(1));
     
-    assertThrows(IndexOutOfBoundsException.class, () -> myArrayListInteger.remove(2));
- 
+    assertThrows(IndexOutOfBoundsException.class,
+        () -> myArrayListInteger.remove(2));
+    
   }
-
+  
 }

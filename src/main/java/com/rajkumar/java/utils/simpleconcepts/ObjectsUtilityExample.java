@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
-import com.rajkumar.java.utils.lib.Utils;
-
 import java.time.Instant;
 import java.util.Objects;
 import java.util.function.Supplier;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import com.rajkumar.java.utils.lib.Utils;
 
 /**
  * Objects static methods example.
@@ -33,7 +33,7 @@ public class ObjectsUtilityExample {
     logger.info("Hash Code is " + hash);
     
     // Test for equality
-    boolean isEqual = Objects.equals(null, null); //NOSONAR
+    boolean isEqual = Objects.equals(null, null); // NOSONAR
     logger.info("null is equal to null: " + isEqual);
     
     isEqual = Objects.equals(null, "XYZ");
@@ -56,7 +56,8 @@ public class ObjectsUtilityExample {
     try {
       // Using a lambda expression to create a Supplier<String> object.
       // The Supplier returns a timestamp message.
-      Supplier<String> messageSupplier = () -> "Name is required " + Instant.now();
+      Supplier<String> messageSupplier = () -> "Name is required "
+          + Instant.now();
       getWithSuplier("Babalu", messageSupplier);
       getWithSuplier(null, messageSupplier);
     } catch (NullPointerException exception) {
@@ -82,8 +83,10 @@ public class ObjectsUtilityExample {
    * To check for NonNull value.
    * 
    * @param name name
+   * @param messageSupplier supplier will provide, if name is null
    */
-  public static void getWithSuplier(String name, Supplier<String> messageSupplier) {
+  public static void getWithSuplier(String name,
+      Supplier<String> messageSupplier) {
     
     // Test name for not null. Generate a NullPointerException if it is null.
     Objects.requireNonNull(name, messageSupplier);
