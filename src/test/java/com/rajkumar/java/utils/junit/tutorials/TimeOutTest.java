@@ -1,12 +1,12 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
+import com.rajkumar.java.utils.lib.Utils;
+
 import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
-
-import com.rajkumar.java.utils.lib.Utils;
 
 /**
  * Timeout example.
@@ -19,7 +19,7 @@ public class TimeOutTest {
   private static Logger logger = LogManager.getLogger();
   
   /**
-   * Testing with timeout operation
+   * Testing with timeout operation.
    */
   @Test(timeout = 200)
   public void testMethod() {

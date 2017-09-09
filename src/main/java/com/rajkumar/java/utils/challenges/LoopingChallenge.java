@@ -22,20 +22,23 @@ public class LoopingChallenge {
    */
   public static void main(String[] args) {
     
-    for (int i = 0; i < 3; i++) {  //NOSONAR
-      hmm:
+    for (int i = 0; i < 3; i++) { // NOSONAR
+      hmm: // NOSONAR
       try {
         logger.info("Try :  " + i);
         if (i % 2 == 0) {
           break hmm;
         } else {
-          throw new RuntimeException("Hmmm");
+          throw new RuntimeException("Hmmm"); // NOSONAR
         }
       } finally {
         logger.info("Finally :  " + i);
         if (i < 2) {
-          continue;  //NOSONAR
-          //This is serious threat. Jump should not be present in finally
+          continue; // NOSONAR
+          /*
+           * This is serious threat. Jump should not be present in finally Due
+           * to that, program is still continuing.
+           */
         }
       }
       

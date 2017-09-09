@@ -4,8 +4,7 @@ package com.rajkumar.java.utils.datastructures.algorithms.dynamic;
  * Dynamic programming and memoization works together. So Most of the problems
  * are solved with two components of dynamic programming (DP)
  * 
- * <p>
- * 1. Recursion — Solve the subproblems recursively <br>
+ * <p>1. Recursion — Solve the subproblems recursively <br>
  * 2. Memoization — Store the solution of these subproblems so that we do not
  * have to solve them again
  * </p>

@@ -11,7 +11,7 @@ import java.util.Collection;
  * @param <E> The type will be added to array list
  *
  */
-public class MyArrayList<E> extends AbstractList<E> {
+public class MyArrayList<E> extends AbstractList<E> { // NOSONAR
   
   private static final int DEFAULT_INITIAL_CAPACITY = 10;
   private int size;

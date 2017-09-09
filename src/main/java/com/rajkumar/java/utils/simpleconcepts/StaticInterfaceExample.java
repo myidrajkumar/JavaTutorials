@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Logger;
 public interface StaticInterfaceExample { // NOSONAR
   
   /**
-   * Just logger
+   * Just logger.
    */
   public static Logger logger = LogManager.getLogger();
   

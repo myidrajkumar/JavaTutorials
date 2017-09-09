@@ -88,8 +88,8 @@ public class BinaryTree<E> {
   
   static class TreeNode<T> {
     
-    public TreeNode<T> left = null;
-    public TreeNode<T> right = null;
+    private TreeNode<T> left = null;
+    private TreeNode<T> right = null;
     private T data = null;
     
     public TreeNode(T data) {
@@ -107,9 +107,19 @@ public class BinaryTree<E> {
       return left;
     }
     
+    public void setLeft(TreeNode<T> left) {
+      
+      this.left = left;
+    }
+    
     public TreeNode<T> getRight() {
       
       return right;
+    }
+    
+    public void setRight(TreeNode<T> right) {
+      
+      this.right = right;
     }
   }
 }

@@ -3,14 +3,15 @@ package com.rajkumar.java.utils.datastructures;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
+import com.rajkumar.java.utils.datastructures.BinaryTree.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.hamcrest.CoreMatchers;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
-
-import com.rajkumar.java.utils.datastructures.BinaryTree.TreeNode;
 
 /**
  * To test binary tree implementation.
@@ -25,16 +26,16 @@ public class BinaryTreeTest {
   /**
    * Initialize the binary tree.
    */
-  @BeforeAll
+  @BeforeClass
   public static void initializeBinaryTree() {
     
     tree = new BinaryTree<>();
     tree.setRoot(new TreeNode<>(3));
-    tree.getRoot().left = new TreeNode<>(4);
-    tree.getRoot().right = new TreeNode<>(5);
-    tree.getRoot().left.left = new TreeNode<>(6);
-    tree.getRoot().left.right = new TreeNode<>(9);
-    tree.getRoot().right.left = new TreeNode<>(2);
+    tree.getRoot().setLeft(new TreeNode<>(4));
+    tree.getRoot().setRight(new TreeNode<>(5));
+    tree.getRoot().getLeft().setLeft(new TreeNode<>(6));
+    tree.getRoot().getLeft().setRight(new TreeNode<>(9));
+    tree.getRoot().getRight().setLeft(new TreeNode<>(2));
   }
   
   /**
@@ -70,7 +71,7 @@ public class BinaryTreeTest {
   @Test
   public final void testGetAllPaths_FromSpecificNode() {
     
-    List<String> pathList = tree.getAllPaths(tree.getRoot().left);
+    List<String> pathList = tree.getAllPaths(tree.getRoot().getLeft());
     
     assertNotNull(pathList);
     assertThat("Path count is not matching", pathList.size(),

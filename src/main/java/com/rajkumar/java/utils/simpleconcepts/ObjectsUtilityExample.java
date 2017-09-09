@@ -1,13 +1,13 @@
 package com.rajkumar.java.utils.simpleconcepts;
 
+import com.rajkumar.java.utils.lib.Utils;
+
 import java.time.Instant;
 import java.util.Objects;
 import java.util.function.Supplier;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
-import com.rajkumar.java.utils.lib.Utils;
 
 /**
  * Objects static methods example.
