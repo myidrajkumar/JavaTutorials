@@ -27,7 +27,7 @@ public class LambdaExample {
    */
   public static void main(String[] args) {
     
-    Comparator<String> anonymousComparator = new Comparator<>() { // NOSONAR
+    Comparator<String> anonymousComparator = new Comparator<String>() { // NOSONAR
       
       @Override
       public int compare(String o1, String o2) {

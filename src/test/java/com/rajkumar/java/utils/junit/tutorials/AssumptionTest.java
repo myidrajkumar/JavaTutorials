@@ -1,5 +1,6 @@
 package com.rajkumar.java.utils.junit.tutorials;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import static org.junit.jupiter.api.Assumptions.assumingThat;
 
