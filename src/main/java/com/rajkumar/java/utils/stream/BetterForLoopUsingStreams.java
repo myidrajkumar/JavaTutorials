@@ -14,8 +14,6 @@ import org.apache.logging.log4j.Logger;
  */
 public class BetterForLoopUsingStreams {
   
-  private static Logger logger = LogManager.getLogger();
-  
   private BetterForLoopUsingStreams() {}
   
   /**
@@ -24,6 +22,8 @@ public class BetterForLoopUsingStreams {
    * @param args empty arguments
    */
   public static void main(String[] args) {
+    
+    Logger logger = LogManager.getLogger();
     
     logger.info("Using IntStream.range() & IntStream.rangeClosed()");
     // Left argument is inclusive whereas right is exclusive

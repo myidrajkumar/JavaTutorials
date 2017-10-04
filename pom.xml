@@ -1,63 +1,63 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<artifactId>JavaTutorials</artifactId>
-	<packaging>jar</packaging>
+    <artifactId>JavaTutorials</artifactId>
+    <packaging>jar</packaging>
 
-	<name>JavaTutorials</name>
-	<url>http://maven.apache.org</url>
+    <name>JavaTutorials</name>
+    <url>http://maven.apache.org</url>
 
-	<properties>
-		<postgresql.java.driver.version>42.1.4</postgresql.java.driver.version>
-		<mail.api.version>1.5.6</mail.api.version>
-		<org.json.version>20170516</org.json.version>
-		<apache.http.version>4.4.6</apache.http.version>
-		<commons.codec.version>1.10</commons.codec.version>
-	</properties>
+    <properties>
+        <postgresql.java.driver.version>42.1.4</postgresql.java.driver.version>
+        <mail.api.version>1.5.6</mail.api.version>
+        <org.json.version>20170516</org.json.version>
+        <apache.http.version>4.4.6</apache.http.version>
+        <commons.codec.version>1.10</commons.codec.version>
+    </properties>
 
-	<parent>
-		<groupId>com.rajkumar.java.utils</groupId>
-		<artifactId>MavenLibrary</artifactId>
-		<version>1.0</version>
-	</parent>
+    <parent>
+        <groupId>com.rajkumar.java.utils</groupId>
+        <artifactId>MavenLibrary</artifactId>
+        <version>1.0</version>
+    </parent>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>[${postgresql.java.driver.version},]</version>
-		</dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>[${postgresql.java.driver.version},]</version>
+        </dependency>
 
-		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>javax.mail-api</artifactId>
-			<version>${mail.api.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>${mail.api.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>${org.json.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${org.json.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>${apache.http.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>${apache.http.version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>${commons.codec.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>${commons.codec.version}</version>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
-	<build>
-		<finalName>Java Tutorials</finalName>
-	</build>
+    <build>
+        <finalName>Java Tutorials</finalName>
+    </build>
 
 </project>

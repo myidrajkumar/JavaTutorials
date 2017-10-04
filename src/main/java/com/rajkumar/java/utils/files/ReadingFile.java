@@ -36,6 +36,9 @@ public class ReadingFile {
     // read file into stream, try-with-resources
     try (Stream<String> linesStream = Files.lines(Paths.get(fileName))) {
       linesStream.forEach(logger::info);
+      
+      //Getting word count
+      
     } catch (IOException exception) {
       logger.error(Utils.getException(exception));
     }
@@ -48,6 +51,8 @@ public class ReadingFile {
     } catch (IOException exception) {
       logger.error(Utils.getException(exception));
     }
+    
+    
   }
   
 }

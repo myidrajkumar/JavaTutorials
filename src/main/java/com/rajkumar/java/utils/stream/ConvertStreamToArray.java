@@ -26,10 +26,14 @@ public class ConvertStreamToArray {
     
     Logger logger = LogManager.getLogger();
     
-    List<String> stringList = Arrays.asList("Red", "Blue", "Green", "Orange",
+    List<String> colorsList = Arrays.asList(
+        "Red", 
+        "Blue", 
+        "Green", 
+        "Orange",
         "Yellow");
-    Stream<String> stringStream = stringList.stream();
-    String[] stringArray = stringStream.toArray(size -> new String[size]);
+    Stream<String> colorsStream = colorsList.stream();
+    String[] stringArray = colorsStream.toArray(size -> new String[size]);
     logger.info(Arrays.toString(stringArray));
     
   }

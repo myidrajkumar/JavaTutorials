@@ -49,7 +49,7 @@ public class FileSearchExample {
             logger.info("Visiting File =>" + file);
           }
           
-          return super.visitFile(file, attrs);
+          return FileVisitResult.CONTINUE;
         }
       });
     } catch (IOException exception) {
