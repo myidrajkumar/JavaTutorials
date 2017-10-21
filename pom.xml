@@ -58,6 +58,8 @@
 
     <build>
         <finalName>Java Tutorials</finalName>
+        
+        <defaultGoal>install</defaultGoal>
     </build>
 
 </project>

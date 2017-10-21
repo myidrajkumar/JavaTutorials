@@ -44,8 +44,8 @@ public class CollectionsCollectingThenExample {
     String avgSalary = employeeList.stream().collect(
         Collectors.collectingAndThen(
             Collectors.averagingDouble(Employee::getSalary),
-            averageSalary -> new DecimalFormat("'$'0.00").format(averageSalary)));
-    System.out.println("Average salary in $: " + avgSalary);
+            new DecimalFormat("'$'0.00")::format));
+    logger.info("Average salary in $: " + avgSalary);
     
   }
   

@@ -26,7 +26,7 @@ public class CollectionsJoiningExample {
     String joinedString = Stream
         .iterate(Integer.valueOf(0), (Integer integer) -> integer + 1)
         .limit(5)
-        .map(integer -> integer.toString())
+        .map(Object::toString)
         .collect(Collectors.joining());
     
     logger.info("Joined String ==> " + joinedString);
@@ -35,7 +35,7 @@ public class CollectionsJoiningExample {
     String joinedStringByDelimiter = Stream
         .iterate(Integer.valueOf(0), (Integer integer) -> integer + 1)
         .limit(5)
-        .map(integer -> integer.toString())
+        .map(Object::toString)
         .collect(Collectors.joining(", "));
     
     logger.info("Joined String By Delimiter==> " + joinedStringByDelimiter);
@@ -44,7 +44,7 @@ public class CollectionsJoiningExample {
     String joinedStringByDelimiterWithPrefixPostfix = Stream
         .iterate(Integer.valueOf(0), (Integer integer) -> integer + 1)
         .limit(5)
-        .map(integer -> integer.toString())
+        .map(Object::toString)
         .collect(Collectors.joining(", ", "{ ", " }"));
     
     logger.info("Joined String With Postfix and Prefix ==> "
