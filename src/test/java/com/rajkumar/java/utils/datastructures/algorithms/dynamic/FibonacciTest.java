@@ -1,8 +1,8 @@
 package com.rajkumar.java.utils.datastructures.algorithms.dynamic;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test case to validate Fibonacci series.
@@ -18,8 +18,10 @@ public class FibonacciTest {
   @Test
   public final void testFindFibonacciUsingRecursive() {
     
-    assertArrayEquals("Fibonacci series is not correct",
-        new Integer[] {0, 1, 1}, Fibonacci.getFibonacciSeriesUsingRecursive(3));
+    assertArrayEquals(
+        new Integer[] {0, 1, 1}, 
+        Fibonacci.getFibonacciSeriesUsingRecursive(3),
+        "Fibonacci series is not correct");
   }
   
   /**
@@ -28,9 +30,10 @@ public class FibonacciTest {
   @Test
   public final void testFindFibonacciUsingIteration() {
     
-    assertArrayEquals("Fibonacci series is not correct",
+    assertArrayEquals(
         new int[] {0, 1, 1, 2, 3},
-        Fibonacci.getFibonacciSeriesUsingIteration(5));
+        Fibonacci.getFibonacciSeriesUsingIteration(5),
+        "Fibonacci series is not correct");
   }
   
   /**
@@ -39,9 +42,10 @@ public class FibonacciTest {
   @Test
   public final void testFindFibonacciUsingMemoization() {
     
-    assertArrayEquals("Fibonacci series is not correct",
+    assertArrayEquals(
         new int[] {0, 1, 1, 2, 3, 5},
-        Fibonacci.getFibonacciSeriesUsingMemoization(6));
+        Fibonacci.getFibonacciSeriesUsingMemoization(6),
+        "Fibonacci series is not correct");
   }
   
 }

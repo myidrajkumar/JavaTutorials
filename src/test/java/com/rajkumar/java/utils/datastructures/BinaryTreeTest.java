@@ -1,7 +1,7 @@
 package com.rajkumar.java.utils.datastructures;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.rajkumar.java.utils.datastructures.BinaryTree.TreeNode;
 
@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.hamcrest.CoreMatchers;
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * To test binary tree implementation.
@@ -28,6 +28,7 @@ public class BinaryTreeTest {
   @BeforeAll
   public static void initializeBinaryTree() {
     
+    System.out.println("Why this is not???");
     tree = new BinaryTree<>();
     tree.setRoot(new TreeNode<>(3));
     tree.getRoot().setLeft(new TreeNode<>(4));

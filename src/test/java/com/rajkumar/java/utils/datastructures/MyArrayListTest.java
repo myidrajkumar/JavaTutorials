@@ -1,14 +1,14 @@
 package com.rajkumar.java.utils.datastructures;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Testing MyArrayList.
@@ -26,8 +26,8 @@ public class MyArrayListTest {
     
     List<Integer> myArrayListInteger = new MyArrayList<>();
     
-    assertEquals("Initial size is not maintained", 0,
-        myArrayListInteger.size());
+    assertEquals(0, myArrayListInteger.size(),
+        "Initial size is not maintained");
   }
   
   /**
@@ -38,8 +38,8 @@ public class MyArrayListTest {
     
     List<Integer> myArrayListInteger = new MyArrayList<>(5);
     
-    assertEquals("Initial size is not maintained", 0,
-        myArrayListInteger.size());
+    assertEquals(0, myArrayListInteger.size(),
+        "Initial size is not maintained");
   }
   
   /**
@@ -54,8 +54,8 @@ public class MyArrayListTest {
     
     List<Integer> myArrayListInteger = new MyArrayList<>(myCollection);
     
-    assertEquals("Initial size is not maintained", 2,
-        myArrayListInteger.size());
+    assertEquals(2, myArrayListInteger.size(),
+        "Initial size is not maintained");
   }
   
   /**
@@ -65,18 +65,18 @@ public class MyArrayListTest {
   public void testAdd() {
     
     List<Integer> myArrayListInteger = new MyArrayList<>(2);
-    assertEquals("Initial size is not maintained", 0,
-        myArrayListInteger.size());
+    assertEquals(0, myArrayListInteger.size(),
+        "Initial size is not maintained");
     
     // Adding elements sequentially
     myArrayListInteger.add(0, 2);
     myArrayListInteger.add(1, 4);
-    assertEquals("size is not maintained", 2, myArrayListInteger.size());
+    assertEquals(2, myArrayListInteger.size(), "size is not maintained");
     
     // With the above, list becomes full. If i try to add now, it should not
     // throw exception
     myArrayListInteger.add(2, 6);
-    assertEquals("size is not maintained", 3, myArrayListInteger.size());
+    assertEquals(3, myArrayListInteger.size(), "size is not maintained");
     
     assertThrows(IndexOutOfBoundsException.class,
         () -> myArrayListInteger.add(5, 8));
