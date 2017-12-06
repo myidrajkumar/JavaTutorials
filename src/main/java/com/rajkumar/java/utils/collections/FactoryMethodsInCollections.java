@@ -25,6 +25,8 @@ import org.apache.logging.log4j.Logger;
  */
 public class FactoryMethodsInCollections {
   
+  private static final String PHILIP = "Philip";
+  private static final String PETER = "Peter";
   private static Logger logger = LogManager.getLogger();
   
   /**
@@ -48,11 +50,11 @@ public class FactoryMethodsInCollections {
    */
   private static void displayMap() {
     
-    Map<Integer, String> immutableMap = Map.of(1, "Peter", 2, "Gerhard");
+    Map<Integer, String> immutableMap = Map.of(1, PETER, 2, "Gerhard");
     logger.info("Immutable Map = " + immutableMap);
     
-    Map<Integer, String> mapEntries = Map.ofEntries(Map.entry(1, "Peter"),
-        Map.entry(2, "Gerhad"), Map.entry(3, "Philip"));
+    Map<Integer, String> mapEntries = Map.ofEntries(Map.entry(1, PETER),
+        Map.entry(2, "Gerhad"), Map.entry(3, PHILIP));
     
     logger.info("Immutable Map Entries= " + mapEntries);
   }
@@ -63,7 +65,7 @@ public class FactoryMethodsInCollections {
   private static void displaySet() {
     
     try {
-      Set.of("Peter", "Philip", "Peter");
+      Set.of(PETER, PHILIP, PETER);
     } catch (IllegalArgumentException exception) {
       logger.info(Utils.getException(exception));
       logger.info("Cannot add duplicate element in set at creation time");
@@ -80,7 +82,7 @@ public class FactoryMethodsInCollections {
     List<String> emptyList = List.of();
     
     // Creating immutable list
-    List<String> immutableList = List.of("Peter", "Philip");
+    List<String> immutableList = List.of(PETER, PHILIP);
     
     logger.info("emptyList = " + emptyList);
     logger.info("Immutable List = " + immutableList);
@@ -88,7 +90,7 @@ public class FactoryMethodsInCollections {
     // Try using null
     try {
       
-      List.of("Peter", null, "Philip");
+      List.of(PETER, null, PHILIP);
       
     } catch (NullPointerException exception) {
       logger.info(Utils.getException(exception));

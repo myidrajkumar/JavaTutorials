@@ -56,7 +56,7 @@ public class FlyWeightFactoryDesignPatternMedium {
     
     public static Character getCharacter(String color) {
       
-      Character character = (Character) characterMap.get(color);
+      Character character = characterMap.get(color);
       
       if (character == null) {
         character = new CharacterA(color);
