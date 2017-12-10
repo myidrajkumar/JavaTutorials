@@ -27,14 +27,7 @@ public class LambdaExample {
    */
   public static void main(String[] args) {
     
-    Comparator<String> anonymousComparator = new Comparator<>() { 
-      
-      @Override
-      public int compare(String o1, String o2) {
-        
-        return o1.compareTo(o2);
-      }
-    };
+    Comparator<String> anonymousComparator = (o1, o2) -> o1.compareTo(o2);
     
     List<String> nameList = Arrays.asList("Raj", "Kumar", "Sasi", "Machi");
     logger.info("Before Sorting \n " + nameList);

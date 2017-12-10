@@ -46,7 +46,8 @@ public class OptionalExample {
         + " getting value from others " + nullOptional.orElseGet(() -> 10));
     
     try {
-      nullOptional.orElseThrow(NoSuchElementException::new);
+      Integer nullInteger = nullOptional.orElseThrow(NoSuchElementException::new);
+      logger.info("From Null Optional ==> " + nullInteger);
     } catch (NoSuchElementException exception) {
       String exceptionValue = Utils.getException(exception);
       logger.info(NULL_OPTIONAL_VALUE_STRING

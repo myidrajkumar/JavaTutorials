@@ -1,5 +1,8 @@
 package com.rajkumar.java.utils.reflection;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * StackWalker.getCallerClass() returns the caller's Class.
  * 
@@ -7,6 +10,8 @@ package com.rajkumar.java.utils.reflection;
  *
  */
 public class StackWalkerCallerClassExample {
+  
+  private static Logger logger = LogManager.getLogger();
   
   /**
    * Main Method.
@@ -34,7 +39,7 @@ public class StackWalkerCallerClassExample {
       StackWalker instance = StackWalker
           .getInstance(StackWalker.Option.RETAIN_CLASS_REFERENCE);
       Class<?> callerClass = instance.getCallerClass();
-      System.out.println(callerClass);
+      logger.info(callerClass);
     }
   }
   

@@ -1,6 +1,7 @@
 package com.rajkumar.java.utils.designpattern.structure;
 
 import java.util.HashMap;
+import java.util.Random;
 
 import org.apache.logging.log4j.LogManager;
 
@@ -52,18 +53,13 @@ public class FlyWeightFactoryDesignPatternMedium {
   
   private static class CharacterFactory {
     
+    private CharacterFactory() {}
+    
     private static HashMap<String, Character> characterMap = new HashMap<>();
     
     public static Character getCharacter(String color) {
       
-      Character character = characterMap.get(color);
-      
-      if (character == null) {
-        character = new CharacterA(color);
-        characterMap.put(color, character);
-      }
-      
-      return character;
+      return characterMap.computeIfAbsent(color, CharacterA::new);
     }
     
   }
@@ -78,10 +74,12 @@ public class FlyWeightFactoryDesignPatternMedium {
     final String[] colors = {"Red", "Green", "Blue", "White", "Black"};
     
     for (int i = 0; i < 15; ++i) {
+      
+      Random random = new Random();
       CharacterA character = (CharacterA) CharacterFactory
-          .getCharacter(colors[(int) (Math.random() * colors.length)]);
-      character.setX((int) (Math.random() * 100));
-      character.setY((int) (Math.random() * 100));
+          .getCharacter(colors[random.nextInt(colors.length)]);
+      character.setX(random.nextInt(100));
+      character.setY(random.nextInt(100));
       character.render();
     }
     
