@@ -38,8 +38,8 @@ public class WeakHashMapExample {
     String weakhashmapValue = "weakhashmapvalue";  
 
     // Putting key and value in HashMap and WeakHashMap Object
-    hashmapObject.put(hashmapKey ,hashmapValue); 
-    weakhashmapObject.put(weakhashmapKey ,weakhashmapValue); 
+    hashmapObject.put(hashmapKey, hashmapValue);
+    weakhashmapObject.put(weakhashmapKey, weakhashmapValue);
 
     // Print HashMap and WeakHashMap Object : Before Garbage Collection
     logger.info("HashMap before Garbage Collected :" + hashmapObject);

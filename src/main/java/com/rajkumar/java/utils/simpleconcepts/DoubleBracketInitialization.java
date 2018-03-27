@@ -7,7 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * 
  * This avoids ordinary verbose initialization of collections. But this approach
  * should be avoided due to the reasons performance
  * 
@@ -21,7 +20,9 @@ public class DoubleBracketInitialization {
   private DoubleBracketInitialization() { }
   
   /**
-   * @param args
+   * Main Method.
+   * 
+   * @param args empty arguments
    */
   public static void main(String[] args) {
     
@@ -34,9 +35,6 @@ public class DoubleBracketInitialization {
     
     List<String> doubleBracketList = new ArrayList<>() {
       
-      /**
-      * 
-      */
       private static final long serialVersionUID = -1648005136352142770L;
       
       {   //NOSONAR    

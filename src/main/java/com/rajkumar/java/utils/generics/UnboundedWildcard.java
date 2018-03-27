@@ -18,7 +18,11 @@ public class UnboundedWildcard {
   
   private UnboundedWildcard() {}
   
-  // generics wildcard method to accept any unknown-type
+  /**
+   * generics wildcard method to accept any unknown-type.
+   * 
+   * @param any any list which accepts anything
+   */
   public static void addArrayListValues(List<?> any) {
     
     for (Object obj : any) {
@@ -27,6 +31,11 @@ public class UnboundedWildcard {
     logger.info("\n");
   }
   
+  /**
+   * Main Method.
+   * 
+   * @param args empty arguments
+   */
   public static void main(String[] args) {
     
     ArrayList<Integer> intList = new ArrayList<>();

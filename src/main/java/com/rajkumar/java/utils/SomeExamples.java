@@ -10,12 +10,15 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
+ * General examples and planning to move these.
+ * 
  * @author Rajkumar
  *
  */
 public class SomeExamples {
   
   private static Logger logger = LogManager.getLogger();
+  private static final String KEY = "Key1";
   
   private SomeExamples() {}
   
@@ -45,22 +48,21 @@ public class SomeExamples {
       logger.debug("StackOverflowError");
     }
     
-    logger.debug("Null does not belong to 'Object' / 'AtomicInteger or other Objects' / 'StackOverflowError or other Errors' reference types.");
+    logger.debug(
+        "Null does not belong to 'Object' / 'AtomicInteger or other Objects' /"
+        + " 'StackOverflowError or other Errors' reference types.");
     
-
   }
   
   private static void complexCollectionExample() {
     
-    List<Map<String, Map<String, String>>> crazyList = new ArrayList<>();
-    
     Map<String, Map<String, String>> crazyMap = new HashMap<>();
     
-    final String KEY = "Key1";
     crazyMap.put(KEY, new HashMap<>());
-    crazyMap.put(KEY, new HashMap<>());  //NOSONAR
+    crazyMap.put(KEY, new HashMap<>());
     crazyMap.put(KEY, new HashMap<>());
     
+    List<Map<String, Map<String, String>>> crazyList = new ArrayList<>();
     crazyList.add(crazyMap);
     
     logger.debug(crazyList.get(0).size());

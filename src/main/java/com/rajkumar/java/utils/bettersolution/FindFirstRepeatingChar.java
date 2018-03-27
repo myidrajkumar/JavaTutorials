@@ -38,7 +38,7 @@ public class FindFirstRepeatingChar {
   }
   
   /**
-   * Better approach: Using extra space
+   * Better approach: Using extra space.
    * 
    * <p>Time complexity is O(N) and Space Complexity is O(N). </p>
    * 

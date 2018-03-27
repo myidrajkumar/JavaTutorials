@@ -18,7 +18,11 @@ public class LowerBoundedWildcard {
   
   private LowerBoundedWildcard() { }
   
-  // generics wildcard method to accept any unknown-type
+  /**
+   * generics wildcard method to accept any unknown-type.
+   * 
+   * @param any any list which accepts only numbers
+   */
   public static void addArrayListValues(List<? super Integer> any) {
     
     for (Object obj : any) {
@@ -27,6 +31,11 @@ public class LowerBoundedWildcard {
     logger.info("\n");
   }
   
+  /**
+   * Main Method.
+   * 
+   * @param args empty arguments
+   */
   public static void main(String[] args) {
     
     List<Integer> intList = new ArrayList<>();

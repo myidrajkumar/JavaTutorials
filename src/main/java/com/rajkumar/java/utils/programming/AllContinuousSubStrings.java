@@ -27,6 +27,7 @@ public class AllContinuousSubStrings {
   }
 
   /**
+   * Printing all the strings.
    * 
    * @param input to which substrings have to be printed.
    */
