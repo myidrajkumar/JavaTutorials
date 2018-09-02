@@ -37,7 +37,15 @@ public class ThreadPoolExample {
     }
     
     executor.shutdown();
-    while (!executor.isTerminated()) {} //NOSONAR - What is the other approach
+    // while (!executor.isTerminated()) {} //NOSONAR - What is the other approach
+    
+    // Do not use the above approach since it is continuously processing
+    try {
+      executor.awaitTermination(1, TimeUnit.HOURS);
+    } catch (InterruptedException exception) {
+      logger.error(Utils.getException(exception));
+      Thread.currentThread().interrupt();
+    }
     
     logger.info("Finished all threads");
   }

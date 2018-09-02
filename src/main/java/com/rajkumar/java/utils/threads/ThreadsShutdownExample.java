@@ -28,7 +28,17 @@ public class ThreadsShutdownExample {
    */
   public static void main(String[] args) {
     
-    Runnable runnable = ThreadsShutdownExample::runnableTask;
+    Runnable runnable = () -> {
+      
+      try {
+        TimeUnit.SECONDS.sleep(2);
+      } catch (InterruptedException exception) {
+        logger.error(Utils.getException(exception));
+        Thread.currentThread().interrupt();
+      }
+      
+      logger.info("Thread --> " + Thread.currentThread().getName());
+    };
     
     ExecutorService executor = Executors.newFixedThreadPool(2);
     for (int i = 0; i < 10; i++) {
@@ -45,18 +55,6 @@ public class ThreadsShutdownExample {
     }
     logger.info("Hello, Am I be printed after completion of threads??");
     
-  }
-
-  private static void runnableTask() {
-    
-    try {
-      TimeUnit.SECONDS.sleep(2);
-    } catch (InterruptedException exception) {
-      logger.error(Utils.getException(exception));
-      Thread.currentThread().interrupt();
-    }
-    
-    logger.info("Thread --> " + Thread.currentThread().getName());
   }
   
 }

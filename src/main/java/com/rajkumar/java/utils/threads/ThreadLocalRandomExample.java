@@ -23,8 +23,8 @@ public class ThreadLocalRandomExample {
    * @param args empty arguments
    */
   public static void main(String[] args) {
-    logger.info(ThreadLocalRandom.current().nextInt(5, 10));
     
+    logger.info(ThreadLocalRandom.current().nextInt(5, 10));
   }
   
 }

@@ -29,19 +29,16 @@ public class ArrayToStreamExample {
     // Try with Object Array
     String[] company = {"Twitter", "Facebook", "Yahoo", "Google"};
     
-    // Arrays.stream - returns a sequential Stream with the specified array as
-    // its source
+    // Returns a sequential Stream
     Stream<String> stream = Arrays.stream(company);
     logger.info("\n1. Arrays.stream output for Object Array:");
     stream.forEach(logger::info);
     
-    // Stream.of - returns a sequential ordered stream whose elements are the
-    // specified values
+    // Returns a sequential ordered stream
     Stream<String> stream2 = Stream.of(company);
     logger.info("\n2. Stream.of output for Object Array:");
     stream2.forEach(logger::info);
     
-    // Now try with Primitive Arrays
     double[] doubleValues = {11.1, 21.2, 31.3, 41.4, 51.5};
     
     DoubleStream doubleStream = Arrays.stream(doubleValues);
